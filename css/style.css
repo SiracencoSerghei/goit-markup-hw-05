@@ -1,0 +1,614 @@
+/* global variables */
+:root {
+  --primary-font-family: "Roboto", sans-serif;
+  --primary-color: #757575;
+  --secondary-color: #212121;
+  --accent-color: #2196f3;
+}
+
+/* BODY */
+body {
+  font-family: var(--primary-font-family), -apple-system, BlinkMacSystemFont,
+    avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu,
+    noto, arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: var(--primary-color);
+
+  max-width: 1600px;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.list,
+.item {
+  list-style-type: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.image {
+  display: block;
+}
+
+/* ШАПКА САЙТУ */
+.page-header {
+  display: block;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  padding: 0;
+  margin-left: 93px;
+}
+
+.nav-link .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav .link.nav-logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #000000;
+}
+
+.nav .link,
+.header-contacts .link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav .link {
+  color: var(--secondary-color);
+}
+
+.header-contacts .link {
+  color: var(--primary-color);
+}
+
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contacts .item + .item {
+  margin-left: 50px;
+}
+
+.header-envelope,
+.header-smartphone {
+  display: inline-flex;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-envelope .icon-header {
+  width: 16px;
+  height: 12px;
+}
+
+.header-smartphone .icon-header {
+  width: 10px;
+  height: 16px;
+}
+
+/* ACCENT, HOVER, FOCUS of site */
+
+.accent,
+.current,
+.nav .current,
+.nav-studio:hover,
+.nav-studio:focus,
+.nav-portfolio:hover,
+.nav-portfolio:focus,
+.nav-contacts:hover,
+.nav-contacts:focus,
+.header-mail:hover,
+.header-tel:hover,
+.header-mail:focus,
+.header-tel:focus,
+.map-link:hover,
+.map-link:focus,
+.footer-mail:hover,
+.footer-tel:hover,
+.footer-mail:focus,
+.footer-tel:focus {
+  color: var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* ПІДВАЛ САЙТУ */
+.page-footer {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: #2f303a;
+}
+
+.footer-box {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer-section1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-section2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.join .icon.list {
+  display: inline-flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 20px;
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.firm-address {
+  font-weight: 400;
+  line-height: 1.71;
+  font-style: normal;
+}
+
+.list .footer-link {
+  margin: 0;
+  padding: 0;
+}
+
+.list .footer-link:not(:first-child) {
+  margin-top: 9px;
+}
+
+.map-link {
+  color: #ffffff;
+}
+
+.footer-mail,
+.footer-tel {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.join-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.join .icon-socialnet {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  fill: #ffffff;
+}
+
+/* BODY OF INDEX.HTML */
+
+/* BANNER SECTION */
+.hero {
+  display: flex;
+  max-width: 1600px;
+  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+     url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.banner-title {
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero .banner-button {
+  display: flex;
+  width: 216px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  cursor: pointer;
+}
+
+.banner-button:hover,
+.banner-button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/* KEY-FEATURES SECTION */
+
+.key-features .list {
+  display: flex;
+  gap: 30px;
+}
+
+.key-features-list .key-features-titles {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+}
+
+.key-features-text {
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.icon-featers {
+  background-color: #f5f4fa;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+}
+
+/* WE-DO SECTION */
+
+.we-do {
+  padding-bottom: 94px;
+}
+
+.we-do-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.we-do .list {
+  display: flex;
+  gap: 30px;
+}
+
+.we-do-list {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+/* OUR TEAM */
+
+.our-team {
+  background: #f5f4fa;
+}
+
+.our-team-title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.our-team .members {
+  display: flex;
+  gap: 30px;
+}
+
+.member {
+  flex-basis: calc((100% - 90px) / 4);
+}
+
+.description-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 32px;
+
+  background: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.employee-name {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.position {
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.description-image .icon.list {
+  display: flex;
+  column-gap: 10px;
+}
+
+.icon-socialnet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+  fill: #afb1b8;
+}
+
+.icon-socialnet:hover,
+.icon-socialnet:focus {
+  fill: #ffffff;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.icon-socialnet .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* frequent-customers-title */
+
+.frequent-customers-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-color);
+}
+
+.frequent-customers .icon.list {
+  display: flex;
+  column-gap: 30px;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+
+.icon-box .icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+
+.icon-box .icon:hover,
+.icon-box .icon:focus,
+.icon-box:hover,
+.icon-box:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* PORTFOLIO-PAGE */
+
+/* BUTTONS */
+
+.portfolio {
+}
+
+.portfolio-filter {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.button-filter {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  color: var(--secondary-color);
+  background: #f5f4fa;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.button-filter:hover,
+.button-filter:focus {
+  background: #2196f3;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* WORK DESCRIPTION */
+.work-examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* Свойство gap CSS задаёт отступы между столбцами и строками, а не вдоль края контейнера сетки. Является сокращением для свойств row-gap и column-gap.*/
+}
+
+.work-list {
+  display: flex;
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.work-list:hover,
+.work-list:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-list-border {
+  margin: 0;
+  padding: 20px 24px;
+
+  border-top: 0;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.work-list .link {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-list-title {
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: var(--secondary-color);
+}
+
+.work-list-description {
+  padding: 0;
+  margin-top: 8px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: left;
+  color: var(--primary-color);
+}
+
+/* .current::after {
+    content: '';
+    position: absolute;
+    width: 48px;
+    height: 4px;
+    background: #2196F3;
+    border-radius: 2px;
+} */

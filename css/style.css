@@ -166,7 +166,9 @@ button {
 .footer-mail:hover,
 .footer-tel:hover,
 .footer-mail:focus,
-.footer-tel:focus {
+.footer-tel:focus,
+.action:hover,
+.action:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -348,6 +350,7 @@ button {
 
 .backdrop {
   position: fixed;
+  z-index: 9;
   top: 0;
   left: 0;
   width: 100%;
